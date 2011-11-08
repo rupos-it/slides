@@ -1,0 +1,248 @@
+\documentclass[10pt]{beamer}
+
+\usepackage{stmaryrd}
+\usepackage{beamerthemesplit}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[italian]{babel}
+
+\newcommand{\TSync}[0]{\ltimes}
+\newcommand{\TWait}[0]{\rtimes}
+\newcommand{\TTot}[0]{\bowtie}
+
+
+\usetheme{Warsaw}
+% per trasparenza su animazioni di blocchi
+\setbeamercovered{dynamic}
+
+
+
+\title{Misurare Processi di Business}
+\author{R.Bruni \and A.Corradini  \and G.Ferrari \and
+  T.Flagella \and R.Guanciale  \and \alert{G.O.Spagnolo}}
+\date{\today \\ \textbf{\alert{Conferenza aica 2011} - Torino}}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Introduzione}
+\subsection{Business Process Management}
+\frame{
+  \begin{block}{Business Process Management}
+    \begin{itemize}
+    \item BPM affronta la modellazione, l'organizzazione, l'applicazione e
+l'ottimizzazione delle attivit\`a necessarie per raggiungere un
+determinato obiettivo (es. offrire un determinato servizio, oppure produrre
+un certo manufatto).
+
+\item In BPM, i processi vengono rappresentati attraverso formalismi grafici,
+permettendo di comunicare in modo non ambiguo le regole di business, 
+e quindi discuterle o modificarle, tra gli svariati ruoli coinvolti  che vanno dagli esperti del dominio di
+business o del settore, agli architetti software e sviluppatori.
+    \end{itemize}
+  \end{block}
+}
+
+\subsection{Sommario}
+\frame{
+  \begin{block}{Obiettivi}
+    \begin{itemize}
+    \item ``Group'' application interactions into process instances
+    \item Monitor process evolution
+    \item Monitor SLAs
+    \item Detect and inspect protocol failures
+    \end{itemize}
+  \end{block}
+  \begin{block}{Strategia}
+    \begin{itemize}
+    \item Adottare ed estendere esistenti metodi formali (Petri Nets)
+    \item Integrare ed estendere esistenti infrastutture software (ProM)
+    \item Metodologia dei work-flow
+      \begin{enumerate}
+      \item I processi sono descritti con BPMN diagrams
+      \item Il BPMN diagram viene trasformata in una Petri Net
+      \item I log delle istanze di processo sono processati usando tecniche disponibili per le Petri Net
+      \item I risultati delle analisi sono proiettati indietro sul modello di partenza BPMN.
+      \end{enumerate}
+    \end{itemize}
+
+  \end{block}
+}
+
+\section{Supporto alla modellazione tramite BPMN}
+\subsection{From BPMN to Petri Net}
+\frame{
+  \begin{block}{Esempio di modello BPMN}
+    \begin{itemize}
+      \item Permette di modellare i processi ad un alto livello di astrazione, questo modello può essere compreso o creato anche
+dai non addetti ai lavori.
+    \end{itemize}
+  \end{block}
+  
+  \begin{center}
+    \includegraphics[scale=0.50]{./fig/residency2}
+  \end{center}
+
+}
+
+\frame{
+  \begin{block}{From BPMN to Petri Net}
+    \begin{itemize}
+      \item Sfruttiamo una metodologia di trasformazione esistente (Dijkman, R.M., Dumas, M., Ouyang, C.) estesa
+      \item Successivamente affrontiamo il problema di
+riportare i risultati di queste analisi sul modello BPMN di partenza.
+    \end{itemize}
+  \end{block}
+  
+  \begin{center}
+    \includegraphics[scale=0.30]{./fig/MappingBPMNtoPN}
+  \end{center}
+
+}
+
+
+\section{Analisi basata su Petri Nets e log di esecuzioni}
+\subsection{Analisi basata su Petri Nets}
+\frame{
+  \begin{block}{Analisi basata su Petri Nets}
+    
+    \begin{itemize}
+      \item Gli eventi delle istanze di processo del log sono ordinati
+        (e.s. timestamp)
+      \item Gli eventi sono mappati sulle transizioni della rete
+      \item \alert{Log Replay}: replay delle istanze di processo del log
+        (non-blocking way)
+        
+        \begin{enumerate}
+         % \item Put a token in the start place
+	  \item L'algoritmo parte con un token nella piazza iniziale
+delle rete
+          \item Estrae dalla testa del log l'evento
+          \item Viene effettuato il fire della corrispondente transizione
+            \begin{itemize}
+              \item se la transizione non è abilitata i token
+mancanti vengono creati artificialmente e chiamati \textbf{missing token}
+            \end{itemize}
+        \end{enumerate}
+      \item Metriche
+        \begin{itemize}
+          \item Il numero di missing/remaining token per ogni piazza/transizione
+          \item Il numero di archi attraversati
+          \item Il tempo di soggiorno/attesa/sincronizzazione per ogni piazza.
+        \end{itemize}
+    \end{itemize}
+
+  \end{block}
+}
+
+\input{log1}
+\input{log2}
+\input{log3}
+
+\subsection{A refined Performance analysis}
+\frame{
+  \begin{block}{A refined Performance analysis}
+    \begin{itemize}
+        \item Exploit standard log-replay techniques in order to reuse
+          existing sw infrastructure
+        \item Transform resulting transition list into eager sequences
+    $R = [tr_1, .... , tr_n]$ for each $tr_i$ invisible transition
+    \begin{itemize}
+      \item let $tr_p$ the last preceding ($p < i$) visible transition
+      \item $\bullet tr_i \cap tr_p \bullet  \not = \emptyset$
+    \end{itemize}
+    
+    \item Straightforward algorithm: for each invisible transition $tr_i$
+      
+      \begin{enumerate}
+        \item left shift the transition until a
+          visible transition $\bullet tr_i \cap tr_p \bullet  \not =
+          \emptyset$
+          is found
+      \end{enumerate}
+      
+    \item All conformance metrics are not changed
+
+    \end{itemize}
+
+  \end{block}
+
+}
+
+\input{log4}
+
+
+\subsection{From Analysis to BPMN}
+\frame{
+  \begin{block}{From Analysis to BPMN (Conformance)}
+    \begin{itemize}
+      \item \alert{Missing tokens}: Log replay produces missing tokens only to fire
+        visible transitions $\Rightarrow$ pre-set of at least one visible
+        transition
+      \item \alert{Remaining tokens} fires invisible transitions fired
+        only if  required by visible transition $\Rightarrow$ 
+        places in the post-set of a visible transition or of an invisible
+transition spawning several tokens
+
+    \end{itemize}
+  \end{block}
+  
+  \begin{center}
+    \includegraphics[scale=0.40]{./fig/MappingBPMNtoPN2}
+  \end{center}
+
+}
+\frame{
+  \begin{block}{From Analysis to BPMN (Performance)}
+    \begin{itemize}
+      \item \alert{Waiting time}: invisible transitions fired
+        immediately $\Rightarrow$ pre-set of visible transitions
+      \item \alert{Synchronization time} places having at least one
+transition in their post-set that depends on another place.
+    \end{itemize}
+  \end{block}
+  
+  \begin{center}
+    \includegraphics[scale=0.50]{./fig/MappingBPMNtoPN3}
+  \end{center}
+
+}
+
+\section{Concluding Remarks}
+\frame{
+  \begin{block}{Theoretical results}
+    
+    \begin{itemize}
+      \item Refined PetriNet techniques to handle invisible
+        transitions
+      \item Measurement projection on the BPMN model
+    \end{itemize}
+
+  \end{block}
+  \begin{block}{Development results}
+    
+    \begin{itemize}
+    \item A new ProM context to execute the plug-ins into a GUI-less
+      environment
+    \item New ProM plug-ins
+      \begin{itemize}
+        \item Model transformation from BPMN to PetriNet
+        \item Eager Sequence transformer
+        \item PetriNet performance evaluator
+        \item Projection of PetriNet measures to the starting BPMN model
+      \end{itemize}
+    \end{itemize}
+
+  \end{block}
+}
+\frame{\tableofcontents}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

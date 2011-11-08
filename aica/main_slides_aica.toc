@@ -1,0 +1,12 @@
+\beamer@endinputifotherversion {3.07pt}
+\select@language {italian}
+\beamer@sectionintoc {1}{Introduzione}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Business Process Management}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Sommario}{3}{0}{1}
+\beamer@sectionintoc {2}{Supporto alla modellazione tramite BPMN}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{From BPMN to Petri Net}{4}{0}{2}
+\beamer@sectionintoc {3}{Analisi basata su Petri Nets e log di esecuzioni}{6}{0}{3}
+\beamer@subsectionintoc {3}{1}{Analisi basata su Petri Nets}{6}{0}{3}
+\beamer@subsectionintoc {3}{2}{A refined Performance analysis}{35}{0}{3}
+\beamer@subsectionintoc {3}{3}{From Analysis to BPMN}{47}{0}{3}
+\beamer@sectionintoc {4}{Concluding Remarks}{49}{0}{4}
