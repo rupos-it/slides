@@ -18,7 +18,7 @@
 
 
 \title{Rupos: Process analysis and ProM development}
-\author{R.Bruni \and \alert{A.Corradini}  \and G.Ferrari \and
+\author{R.Bruni \and \alert{A.Corradini}  \and G.Ferrari 
   \and R.Guanciale  \and G.Spagnolo}
 \date{\today \\ \textbf{\alert{RUPOS}}}
 
@@ -30,14 +30,6 @@
 
 \subsection{Summary}
 \frame{
-  \begin{block}{Goals}
-    \begin{itemize}
-    \item ``Group'' application interactions into process instances
-    \item Monitor process evolution
-    \item Monitor SLAs
-    \item Detect and inspect protocol failures
-    \end{itemize}
-  \end{block}
   \begin{block}{Strategy}
     \begin{itemize}
     \item Adopt and extend existing formal methods (Petri Nets)
@@ -56,10 +48,47 @@
 }
 
 
-\section{The The Process Monitoring platform}
-\subsection{Engineering efforts}
+% VECCHIO PEZZO DElL'ARCHITETTURA
+% \section{The The Process Monitoring platform}
+% \subsection{Engineering efforts}
 
-\input{architecture}
+% \input{architecture}
+
+\section{BPMN modeling}
+\subsection{BPMN Example}
+\frame{
+  Example of BPMN Rupos process
+  
+  \begin{center}
+    \includegraphics[scale=0.15]{./fig/BPMN}
+  \end{center}
+
+}
+\subsection{From BPMN to Petri Net}
+\frame{
+  \begin{block}{From BPMN to Petri Net}
+    \begin{itemize}
+      \item Allow to model process definitions in at a higher abstraction level, easier to understand for
+the stakeholders
+      \item Exploit one of the existing model transformations (Dijkman, R.M., Dumas, M., Ouyang, C.)
+    \end{itemize}
+  \end{block}
+  
+  \begin{center}
+    \includegraphics[scale=0.30]{./fig/MappingBPMNtoPN}
+  \end{center}
+
+}
+\subsection{BPMN Example}
+\frame{
+  BPMN process transformed into a PetriNet
+  
+  \begin{center}
+    \includegraphics[scale=0.15]{./fig/exampleBPMNtoPn}
+  \end{center}
+
+}
+
 
 \section{Formal Analysis based on Petri nets}
 \subsection{Adopted Petri Net techniques}
@@ -93,9 +122,9 @@
   \end{block}
 }
 
-\input{log1}
+% \input{log1}
 \input{log2}
-\input{log3}
+% \input{log3}
 
 \subsection{A refined Performance analysis}
 \frame{
@@ -129,23 +158,16 @@
 
 \input{log4}
 
-\section{Supporting BPMN modeling}
-\subsection{From BPMN to Petri Net}
 \frame{
-  \begin{block}{From BPMN to Petri Net}
-    \begin{itemize}
-      \item Allow to model process definitions in at a higher abstraction level, easier to understand for
-the stakeholders
-      \item Exploit one of the existing model transformations (Dijkman, R.M., Dumas, M., Ouyang, C.)
-    \end{itemize}
-  \end{block}
-  
+  Example of conformance and performance analyses
   \begin{center}
-    \includegraphics[scale=0.30]{./fig/MappingBPMNtoPN}
+    \includegraphics[scale=0.15]{./fig/examplePnconformance}\\
+    \includegraphics[scale=0.15]{./fig/examplePnPerformance}
   \end{center}
 
 }
-\subsection{From Analysis to BPMN}
+
+\section{From Analysis to BPMN}
 \frame{
   \begin{block}{From Analysis to BPMN (Conformance)}
     \begin{itemize}
@@ -177,6 +199,16 @@ transition in their post-set that depends on another place.
   
   \begin{center}
     \includegraphics[scale=0.50]{./fig/MappingBPMNtoPN3}
+  \end{center}
+
+}
+
+\frame{
+  Example of conformance and performance analyses projected on the
+  BPMN process
+  \begin{center}
+    \includegraphics[scale=0.15]{./fig/exampleBPMNConformance}\\
+    \includegraphics[scale=0.15]{./fig/exampleBPMNPerformance}
   \end{center}
 
 }
