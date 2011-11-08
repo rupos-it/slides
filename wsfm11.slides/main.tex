@@ -1,0 +1,263 @@
+\documentclass[10pt]{beamer}
+
+\usepackage{stmaryrd}
+\usepackage{beamerthemesplit}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+
+\newcommand{\TSync}[0]{\ltimes}
+\newcommand{\TWait}[0]{\rtimes}
+\newcommand{\TTot}[0]{\bowtie}
+
+
+\usetheme{Warsaw}
+% per trasparenza su animazioni di blocchi
+\setbeamercovered{dynamic}
+
+
+
+\title{Applying Process Analysis to the Italian eGov
+  Enterprise Architecture}
+\author{R.Bruni \and A.Corradini  \and G.Ferrari \and
+  T.Flagella \and \alert{R.Guanciale}  \and G.Spagnolo}
+\date{\today \\ \textbf{\alert{WSFM 2011} - Clermont-Ferrand}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Introduction}
+\subsection{SPCoop}
+\frame{
+  \begin{block}{SPCoop}
+    \begin{itemize}
+    \item Enterprise Architecture for
+      the
+      Italian Public Administrations
+    \item Syntactical specification:
+      extension of
+      the SOAP 1.1 envelope (\alert{e-Gov
+        Envelope})
+    \item Architectural constraints:
+      application service interactions
+      intercepted by the \alert{Domain Gateway}
+    \end{itemize}
+  \end{block}
+  
+  \begin{center}
+    \includegraphics[scale=0.30]{./fig/intro3}
+  \end{center}
+}
+
+\subsection{Summary}
+\frame{
+  \begin{block}{Goals}
+    \begin{itemize}
+    \item ``Group'' application interactions into process instances
+    \item Monitor process evolution
+    \item Monitor SLAs
+    \item Detect and inspect protocol failures
+    \end{itemize}
+  \end{block}
+  \begin{block}{Strategy}
+    \begin{itemize}
+    \item Adopt and extend existing formal methods (Petri Nets)
+    \item Integrate and extend existing sw-infrastructure (ProM)
+    \end{itemize}
+  \end{block}
+}
+
+
+\section{The The Process Monitoring platform}
+\subsection{Engineering efforts}
+
+\input{architecture}
+
+\section{Formal Analysis based on Petri nets}
+\subsection{Methodology workflow}
+\frame{
+  \begin{block}{Methodology workflow}
+    
+    \begin{itemize}
+      \item Processes are provided as BPMN diagrams
+      \item BPMN diagram is transformed into Petri Net
+      \item Process Instance logs are processes by refined techniques
+        available for PetriNet
+      \item Analysis results are projected back to the starting BPMN model.
+    \end{itemize}
+
+  \end{block}
+}
+\subsection{Adopted Petri Net techniques}
+\frame{
+  \begin{block}{Adopted Petri Net techniques}
+    
+    \begin{itemize}
+      \item Process instance logs are ordered events
+        (e.g. timestamp)
+      \item Events are mapped to net transitions
+      \item \alert{Log Replay}: replay a process instance log in a
+        non-blocking way
+        
+        \begin{enumerate}
+          \item Put a token in the start place
+          \item Extract head event of the log
+          \item fire the corresponding transition
+            \begin{itemize}
+              \item if the transition is not enabled
+              artificially create the missing tokens
+            \end{itemize}
+        \end{enumerate}
+      \item Metrics
+        \begin{itemize}
+          \item Number of missing/remaining token for each places/transition
+          \item Number of edge traversal
+          \item sojourn/waiting/synchronization time for each place
+        \end{itemize}
+    \end{itemize}
+
+  \end{block}
+}
+
+\input{log1}
+\input{log2}
+\input{log3}
+
+\subsection{A refined Performance analysis}
+\frame{
+  \begin{block}{A refined Performance analysis}
+    \begin{itemize}
+        \item Exploit standard log-replay techniques in order to reuse
+          existing sw infrastructure
+        \item Transform resulting transition list into eager sequences
+    $R = [tr_1, .... , tr_n]$ for each $tr_i$ invisible transition
+    \begin{itemize}
+      \item let $tr_p$ the last preceding ($p < i$) visible transition
+      \item $\bullet tr_i \cap tr_p \bullet  \not = \emptyset$
+    \end{itemize}
+    
+    \item Straightforward algorithm: for each invisible transition $tr_i$
+      
+      \begin{enumerate}
+        \item left shift the transition until a
+          visible transition $\bullet tr_i \cap tr_p \bullet  \not =
+          \emptyset$
+          is found
+      \end{enumerate}
+      
+    \item All conformance metrics are not changed
+
+    \end{itemize}
+
+  \end{block}
+
+}
+
+\input{log4}
+
+\section{Supporting BPMN modeling}
+\subsection{From BPMN to Petri Net}
+\frame{
+  \begin{block}{From BPMN to Petri Net}
+    \begin{itemize}
+      \item Allow to model process definitions in at a higher abstraction level, easier to understand for
+the stakeholders
+      \item Exploit one of the existing model transformations (Dijkman, R.M., Dumas, M., Ouyang, C.)
+      \item Implemented as ProM 6 plug-in
+    \end{itemize}
+  \end{block}
+  
+  \begin{center}
+    \includegraphics[scale=0.30]{./fig/MappingBPMNtoPN}
+  \end{center}
+
+}
+\subsection{From Analysis to BPMN}
+\frame{
+  \begin{block}{From Analysis to BPMN (Conformance)}
+    \begin{itemize}
+      \item \alert{Missing tokens}: Log replay produces missing tokens only to fire
+        visible transitions $\Rightarrow$ pre-set of at least one visible
+        transition
+      \item \alert{Remaining tokens} fires invisible transitions fired
+        only if  required by visible transition $\Rightarrow$ 
+        places in the post-set of a visible transition or of an invisible
+transition spawning several tokens
+
+    \end{itemize}
+  \end{block}
+  
+  \begin{center}
+    \includegraphics[scale=0.40]{./fig/MappingBPMNtoPN2}
+  \end{center}
+
+}
+\frame{
+  \begin{block}{From Analysis to BPMN (Performance)}
+    \begin{itemize}
+      \item \alert{Waiting time}: invisible transitions fired
+        immediately $\Rightarrow$ pre-set of visible transitions
+      \item \alert{Synchronization time} places having at least one
+transition in their post-set that depends on another place.
+    \end{itemize}
+  \end{block}
+  
+  \begin{center}
+    \includegraphics[scale=0.50]{./fig/MappingBPMNtoPN3}
+  \end{center}
+
+}
+\frame{
+  \begin{block}{From Analysis to BPMN}
+    \begin{itemize}
+      \item Performance projection is easy because we exploit eager
+        replay sequences
+        
+        \begin{itemize}
+          \item standard log-replay sequences infer synchronization times of join gateways only if the concurrent branches
+terminate with visible transitions
+          \item synchronization times are migrated across waiting
+            times of involved transitions
+        \end{itemize}
+      \item Both projections have been implemented as ProM plug-ins
+        that annotate the starting diagram.
+    \end{itemize}
+  \end{block}
+}
+
+\section{Concluding Remarks}
+\frame{
+  \begin{block}{Concluding Remarks}
+    
+    \begin{itemize}
+      \item We adopted refined PetriNet techniques driven by
+        the application context
+      \item We integrated the ProM framework
+      \item We extended ProM by implementing several plug-ins
+        (EagerSequenceTransformer-PerformanceEvaluator-BPMN2PetriNet-PetriNetMetrics2BPMN)
+      \item \url{http://github.com/rupos}
+    \end{itemize}
+
+  \end{block}
+  \begin{block}{Future works}
+    
+    \begin{itemize}
+      \item Extend BPMN support
+      \item Integrate data-mining algorithms
+      \item Integrate resource allocation management
+      \item Investigate process algebra alternatives (to apply the
+        methodology to different context)
+    \end{itemize}
+
+  \end{block}
+}
+\frame{\tableofcontents}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
