@@ -17,38 +17,16 @@
 
 
 
-\title{Applying Process Analysis to the Italian eGov
-  Enterprise Architecture}
-\author{R.Bruni \and A.Corradini  \and G.Ferrari \and
-  T.Flagella \and \alert{R.Guanciale}  \and G.Spagnolo}
-\date{\today \\ \textbf{\alert{WSFM 2011} - Clermont-Ferrand}}
+\title{Rupos: Process analysis and ProM development}
+\author{R.Bruni \and \alert{A.Corradini}  \and G.Ferrari \and
+  \and R.Guanciale  \and G.Spagnolo}
+\date{\today \\ \textbf{\alert{RUPOS}}}
 
 \begin{document}
 
 \frame{\titlepage}
 
 \section{Introduction}
-\subsection{SPCoop}
-\frame{
-  \begin{block}{SPCoop}
-    \begin{itemize}
-    \item Enterprise Architecture for
-      the
-      Italian Public Administrations
-    \item Syntactical specification:
-      extension of
-      the SOAP 1.1 envelope (\alert{e-Gov
-        Envelope})
-    \item Architectural constraints:
-      application service interactions
-      intercepted by the \alert{Domain Gateway}
-    \end{itemize}
-  \end{block}
-  
-  \begin{center}
-    \includegraphics[scale=0.30]{./fig/intro3}
-  \end{center}
-}
 
 \subsection{Summary}
 \frame{
@@ -64,7 +42,16 @@
     \begin{itemize}
     \item Adopt and extend existing formal methods (Petri Nets)
     \item Integrate and extend existing sw-infrastructure (ProM)
+    \item Methodology work-flow
+      \begin{enumerate}
+      \item Processes are provided as BPMN diagrams
+      \item BPMN diagram is transformed into Petri Net
+      \item Process Instance logs are processes by refined techniques
+        available for PetriNet
+      \item Analysis results are projected back to the starting BPMN model.
+      \end{enumerate}
     \end{itemize}
+
   \end{block}
 }
 
@@ -75,20 +62,6 @@
 \input{architecture}
 
 \section{Formal Analysis based on Petri nets}
-\subsection{Methodology workflow}
-\frame{
-  \begin{block}{Methodology workflow}
-    
-    \begin{itemize}
-      \item Processes are provided as BPMN diagrams
-      \item BPMN diagram is transformed into Petri Net
-      \item Process Instance logs are processes by refined techniques
-        available for PetriNet
-      \item Analysis results are projected back to the starting BPMN model.
-    \end{itemize}
-
-  \end{block}
-}
 \subsection{Adopted Petri Net techniques}
 \frame{
   \begin{block}{Adopted Petri Net techniques}
@@ -164,7 +137,6 @@
       \item Allow to model process definitions in at a higher abstraction level, easier to understand for
 the stakeholders
       \item Exploit one of the existing model transformations (Dijkman, R.M., Dumas, M., Ouyang, C.)
-      \item Implemented as ProM 6 plug-in
     \end{itemize}
   \end{block}
   
@@ -208,46 +180,30 @@ transition in their post-set that depends on another place.
   \end{center}
 
 }
-\frame{
-  \begin{block}{From Analysis to BPMN}
-    \begin{itemize}
-      \item Performance projection is easy because we exploit eager
-        replay sequences
-        
-        \begin{itemize}
-          \item standard log-replay sequences infer synchronization times of join gateways only if the concurrent branches
-terminate with visible transitions
-          \item synchronization times are migrated across waiting
-            times of involved transitions
-        \end{itemize}
-      \item Both projections have been implemented as ProM plug-ins
-        that annotate the starting diagram.
-    \end{itemize}
-  \end{block}
-}
 
 \section{Concluding Remarks}
 \frame{
-  \begin{block}{Concluding Remarks}
+  \begin{block}{Theoretical results}
     
     \begin{itemize}
-      \item We adopted refined PetriNet techniques driven by
-        the application context
-      \item We integrated the ProM framework
-      \item We extended ProM by implementing several plug-ins
-        (EagerSequenceTransformer-PerformanceEvaluator-BPMN2PetriNet-PetriNetMetrics2BPMN)
-      \item \url{http://github.com/rupos}
+      \item Refined PetriNet techniques to handle invisible
+        transitions
+      \item Measurement projection on the BPMN model
     \end{itemize}
 
   \end{block}
-  \begin{block}{Future works}
+  \begin{block}{Development results}
     
     \begin{itemize}
-      \item Extend BPMN support
-      \item Integrate data-mining algorithms
-      \item Integrate resource allocation management
-      \item Investigate process algebra alternatives (to apply the
-        methodology to different context)
+    \item A new ProM context to execute the plug-ins into a GUI-less
+      environment
+    \item New ProM plug-ins
+      \begin{itemize}
+        \item Model transformation from BPMN to PetriNet
+        \item Eager Sequence transformer
+        \item PetriNet performance evaluator
+        \item Projection of PetriNet measures to the starting BPMN model
+      \end{itemize}
     \end{itemize}
 
   \end{block}
