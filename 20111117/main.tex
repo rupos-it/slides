@@ -57,38 +57,65 @@
 \section{BPMN modeling}
 \subsection{BPMN Example}
 \frame{
-  Rupos BPMN process example
+  Rupos BPMN process example and its transformation
   
   \begin{center}
-    \includegraphics[scale=0.55]{./fig/BPMNb}
+    \includegraphics[scale=0.55]{./fig/BPMNandPN}
+  \end{center}
+}
+
+\frame{
+  \begin{block}{From SOAP messages to BPMN events}
+  \begin{center}
+  \begin{tiny}
+    \begin{tabular}{|l|lll|}
+      \hline
+      \textbf{SOAP message} & \textbf{BPMN Event} &  &\\
+
+      \hline
+      richiestaAutorizzazione & AvvioProcedimento & AvvioProcedimento
+      & \\
+      request  &  start &  complete &\\
+
+      \hline
+      interrogaStatoAutorizzazione & RinnovaAutorizzazione &
+      RinnovaAutorizzazione  & \\
+      response[Rinnovo] & start & complete &\\
+
+      \hline
+      interrogaStatoAutorizzazione & RilascioAutorizzazione &
+      RilascioAutorizzazione & \\
+      response[Rilascio] & start & complete & \\
+
+      \hline
+      interrogaStatoAutorizzazione & RilascioAutorizzazione &
+      NegaAutorizzazione & \\
+      response[Nega] & start & complete & \\
+
+      \hline
+      richiestaParere & Parere &  & \\
+      request & start & & \\
+
+      \hline
+      emissioneParere & Parere & ParereNegativo & ParereNegativo \\
+      request[Negativo] & complete & start & complete\\
+
+      \hline
+      emissioneParere & Parere & ParerePositivo & ParerePositivo \\
+      request[Positivo] & complete & start & complete\\
+
+      \hline
+      emissioneParere & Parere & ParereConRiserva & ParereConRiserva \\
+      request[conRiserva] & complete & start & complete\\
+
+      \hline
+    \end{tabular}
+  \end{tiny}
   \end{center}
 
-}
-\subsection{From BPMN to Petri Net}
-\frame{
-  \begin{block}{From BPMN to Petri Net}
-    \begin{itemize}
-      \item Allow to model process definitions in at a higher abstraction level, easier to understand for
-the stakeholders
-      \item Exploit one of the existing model transformations (Dijkman, R.M., Dumas, M., Ouyang, C.)
-    \end{itemize}
   \end{block}
-  
-  \begin{center}
-    \includegraphics[scale=0.30]{./fig/MappingBPMNtoPN}
-  \end{center}
 
 }
-\subsection{BPMN Example}
-\frame{
-  BPMN process transformed into a PetriNet
-  
-  \begin{center}
-    \includegraphics[scale=0.55]{./fig/PN}
-  \end{center}
-
-}
-
 
 \section{Formal Analysis based on Petri nets}
 \subsection{Adopted Petri Net techniques}
@@ -161,17 +188,11 @@ the stakeholders
 \frame{
   Example of conformance analysis
   \begin{center}
-    \includegraphics[scale=0.55]{./fig/ConfPN}\\
+    \includegraphics[scale=0.50]{./fig/ConfPN}\\[10pt]
+    \includegraphics[scale=0.50]{./fig/BPMNConf}
   \end{center}
 
 }
-\frame{
-  Example of performance analysis
-  \begin{center}
-    \includegraphics[scale=0.55]{./fig/PerfPN}
-  \end{center}
-}
-
 \section{From Analysis to BPMN}
 \frame{
   \begin{block}{From Analysis to BPMN (Conformance)}
@@ -192,6 +213,15 @@ transition spawning several tokens
   \end{center}
 
 }
+
+\frame{
+  Example of performance analysis
+  \begin{center}
+    \includegraphics[scale=0.55]{./fig/PerfPN}\\[10pt]
+    \includegraphics[scale=0.50]{./fig/BPMNPerf}
+  \end{center}
+}
+
 \frame{
   \begin{block}{From Analysis to BPMN (Performance)}
     \begin{itemize}
@@ -208,33 +238,24 @@ transition in their post-set that depends on another place.
 
 }
 
-\frame{
-  Example of conformance and performance analyses projected on the
-  BPMN process
-  \begin{center}
-    \includegraphics[scale=0.50]{./fig/BPMNConf}\\
-    \includegraphics[scale=0.50]{./fig/BPMNPerf}
-  \end{center}
-
-}
-
 \section{Concluding Remarks}
 \frame{
   \begin{block}{June results}
     \begin{itemize}
       \item Refined PetriNet techniques to handle invisible
         transitions
-      \item Measurement projection on the BPMN model
+      \item Methodology to project measures on the BPMN model
       \item A new ProM context to execute the plug-ins into a GUI-less
       environment
-    \item Eager Sequence transformer
-    \item PetriNet performance evaluator
+    \item Eager Sequence transformer plug-in
+    \item PetriNet performance evaluator plug-in
     \end{itemize}
   \end{block}
   \begin{block}{Current results}
     \begin{itemize}
-        \item Model transformation from BPMN to PetriNet
-        \item Projection of PetriNet measures to the starting BPMN model
+        \item Model transformation from BPMN to PetriNet plug-in
+        \item Projection of PetriNet measures to the starting BPMN
+          model plug-in
     \end{itemize}
   \end{block}
   \begin{block}{Ongoing works}
