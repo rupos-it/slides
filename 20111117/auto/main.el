@@ -13,9 +13,6 @@
      "beamer10"
      "beamer"
      "10pt"
-     "architecture"
-     "log1"
      "log2"
-     "log3"
      "log4")))
 
