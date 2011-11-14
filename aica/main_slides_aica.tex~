@@ -48,9 +48,9 @@
     \subsection{Business Process Management}
     \frame{
       \begin{block} {Contesto}
-       Le attivit\`a di ricerca qui descritte sono state realizzate
+       Questa attivit\`a di ricerca è stata realizzata
 nell'ambito del progetto di \emph{Ricerca sull'Usabilit\`a delle
-  Piattaforme Orientate ai Servizi}, con il parziale supporto della
+  Piattaforme Orientate ai Servizi} (RUPOS), con il parziale supporto della
   Regione Toscana
       \end{block}
 
@@ -172,7 +172,7 @@ nell'ambito del progetto di \emph{Ricerca sull'Usabilit\`a delle
 	      \item L'algoritmo parte con un token nella piazza iniziale
     delle rete
 	      \item Estrae dalla testa del log l'evento
-	      \item Viene effettuato il fire della corrispondente transizione
+	      \item Viene effettuato il firing della corrispondente transizione
 		\begin{itemize}
 		  \item Se la transizione non è abilitata i token
     mancanti vengono creati artificialmente e chiamati \textbf{missing token}

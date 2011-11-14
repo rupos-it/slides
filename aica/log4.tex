@@ -1,17 +1,17 @@
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $(A, 1s), (B, 2s), (C, 4), (D, 8s)$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $A, B, t1, C, D$
+      \item Eventi del log $(A, 1s), (B, 2s), (C, 4), (D, 8s)$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $A, B, t1, C, D$
     \end{itemize}
 
   \end{block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay3a}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{ccc}
                   \\
        $\TSync$   \\
@@ -21,19 +21,19 @@
 }
 
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $\alert{(A, 1s)}, (B, 2s), (C, 4), (D, 8s)$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $\alert{A}, B, t1, C, D$
+      \item Eventi del log $\alert{(A, 1s)}, (B, 2s), (C, 4), (D, 8s)$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $\alert{A}, B, t1, C, D$
     \end{itemize}
 
   \end{block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay3a}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{ccc}
                   \\
        $\TSync$   \\
@@ -43,19 +43,19 @@
 }
 
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $\alert{(A, 1s)}, (B, 2s), (C, 4), (D, 8s)$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $\alert{A}, B, t1, C, D$
+      \item Eventi del log $\alert{(A, 1s)}, (B, 2s), (C, 4), (D, 8s)$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $\alert{A}, B, t1, C, D$
     \end{itemize}
 
   \end{block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay3b}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{ccc}
                   & p0 & p2 \\
        $\TSync$   & 0  & 0  \\
@@ -64,19 +64,19 @@
   \end{block}
 }
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $(A, 1s), \alert{(B, 2s)}, (C, 4), (D, 8s)$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $A, \alert{B}, t1, C, D$
+      \item Eventi del log $(A, 1s), \alert{(B, 2s)}, (C, 4), (D, 8s)$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $A, \alert{B}, t1, C, D$
     \end{itemize}
 
   \end{block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay3b}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{ccc}
                   & p0 & p2 \\
        $\TSync$   & 0  & 0  \\
@@ -85,19 +85,19 @@
   \end{block}
 }
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $(A, 1s), \alert{(B, 2s)}, (C, 4), (D, 8s)$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $A, \alert{B}, t1, C, D$
+      \item Eventi del log $(A, 1s), \alert{(B, 2s)}, (C, 4), (D, 8s)$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $A, \alert{B}, t1, C, D$
     \end{itemize}
 
   \end{block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay3c}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{cccccc}
                   & p0 & p2 & p1 \\
        $\TSync$   & 0  & 0  & 0  \\
@@ -108,19 +108,19 @@
 
 % Attivazione di t1
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $(A, 1s), \alert{(B, 2s)}, (C, 4), (D, 8s)$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $A, B, \alert{t1}, C, D$
+      \item Eventi del log $(A, 1s), \alert{(B, 2s)}, (C, 4), (D, 8s)$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $A, B, \alert{t1}, C, D$
     \end{itemize}
 
   \end{block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay3c}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{cccccc}
                   & p0 & p2 & p1 \\
        $\TSync$   & 0  & 0  & 0  \\
@@ -129,18 +129,18 @@
   \end{block}
 }
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $(A, 1s), \alert{(B, 2s)}, (C, 4), (D, 8s)$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $A, B, \alert{t1}, C, D$
+      \item Eventi del log $(A, 1s), \alert{(B, 2s)}, (C, 4), (D, 8s)$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $A, B, \alert{t1}, C, D$
     \end{itemize}
   \end {block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay4d}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{cccccc}
                   & p0 & p2 & p1 & p3 & p4 \\
        $\TSync$   & 0  & 0  & 0  &    &    \\
@@ -150,18 +150,18 @@
 }
 
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $(A, 1s), (B, 2s), \alert{(C, 4)}, (D, 8s)$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $A, B, t1, \alert{C}, D$
+      \item Eventi del log $(A, 1s), (B, 2s), \alert{(C, 4)}, (D, 8s)$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $A, B, t1, \alert{C}, D$
     \end{itemize}
   \end {block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay4d}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{cccccc}
                   & p0 & p2 & p1 & p3 & p4 \\
        $\TSync$   & 0  & 0  & 0  &    &    \\
@@ -170,18 +170,18 @@
   \end{block}
 }
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $(A, 1s), (B, 2s), \alert{(C, 4)}, (D, 8s)$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $A, B, t1, \alert{C}, D$
+      \item Eventi del log $(A, 1s), (B, 2s), \alert{(C, 4)}, (D, 8s)$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $A, B, t1, \alert{C}, D$
     \end{itemize}
   \end {block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay4e}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{cccccc}
                   & p0 & p2 & p1 & p3 & p4 \\
        $\TSync$   & 0  & 0  & 0  & 0  & 2  \\
@@ -190,18 +190,18 @@
   \end{block}
 }
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $(A, 1s), (B, 2s), (C, 4), \alert{(D, 8s)}$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $A, B, t1, C, \alert{D}$
+      \item Eventi del log $(A, 1s), (B, 2s), (C, 4), \alert{(D, 8s)}$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $A, B, t1, C, \alert{D}$
     \end{itemize}
   \end {block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay4e}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{cccccc}
                   & p0 & p2 & p1 & p3 & p4 \\
        $\TSync$   & 0  & 0  & 0  & 0  & 2  \\
@@ -210,18 +210,18 @@
   \end{block}
 }
 \frame{
-  \begin{block}{Refined Performance example}
+  \begin{block}{Esempio Calcolo Performance}
     
     \begin{itemize}
-      \item Trace log $(A, 1s), (B, 2s), (C, 4), \alert{(D, 8s)}$ 
-      \item Log replay transition sequence  $A, B, C, t1, D$
-      \item Resulting eager sequence $A, B, t1, C, \alert{D}$
+      \item Eventi del log $(A, 1s), (B, 2s), (C, 4), \alert{(D, 8s)}$ 
+      \item Sequenza di transizioni del log replay  $A, B, C, t1, D$
+      \item Risultato della sequenza \textquotedblleft eager\textquotedblright $A, B, t1, C, \alert{D}$
     \end{itemize}
   \end {block}
   \begin{center}
     \includegraphics[scale=0.30]{./fig/LogReplay4f}
   \end{center}
-  \begin {block}{Measures}
+  \begin {block}{Misure}
     \begin{tabular}{cccccc}
                   & p0 & p2 & p1 & p3 & p4 \\
        $\TSync$   & 0  & 0  & 0  & 0  & 2  \\
