@@ -6,3 +6,5 @@
 *.snm
 *.gz
 
+
+.DS_Store
