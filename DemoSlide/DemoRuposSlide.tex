@@ -110,9 +110,9 @@
 	%\end{block}
 	%\end{frame}
 	
-	\section{[A2.2] Analisi e verifica dei pattern fondamentali}
+	\section{Analisi e verifica dei pattern fondamentali}
 	\subsection{Sommario}
-	\begin{frame}{[A2.2] Analisi e verifica dei pattern fondamentali}
+	\begin{frame}{ Analisi e verifica dei pattern fondamentali}
 	  \begin{block}{Obiettivo}
 	\begin{itemize}
 	  \item Integrare in RUPOS strumenti di analisi a runtime di processi
@@ -206,62 +206,6 @@
 	}
 	
 	
-	\subsection{Tecniche di analisi}
-	\frame{
-	  \begin{block}{Tecniche di analisi di Reti di Petri adottate}
-	    
-	    \begin{itemize}
-	      \item I log delle istanze di processi sono sequenze ordinate di eventi (e.g. in base a timestamp)
-	      \item Gli eventi dei log sono mappati su transizioni della rete
-	      \item<2-> Algoritmo di \alert{log-replay}: ri-esegue un log di una istanza di processo in modo ``non bloccante''
-	        
-	        \begin{enumerate}
-	          \item Si mette un token nella piazza di partenza
-	          \item Se estrae il primo evento del log
-	          \item Si esegue la transizione corrispondente
-	            \begin{itemize}
-	              \item se la transizione non \`{e} abilitata vengono creati artificialmente i token mancanti
-	            \end{itemize}
-	        \end{enumerate}
-	      \item <3->Metriche calcolate durante il log-replay
-	        \begin{itemize}
-	          \item Numero di token mancanti o rimanenti per ogni piazza o transizione
-	          \item Numero di attraversamenti per ogni arco
-	          \item Tempo di soggiorno/attesa/sincronizzazione per ogni piazza
-	        \end{itemize}
-	    \end{itemize}
-	
-	  \end{block}
-	}
-	
-	% \input{log1}
-	% ***AC \input{log2}
-	% \input{log3}
-	
-	
-	\frame{
-	  \begin{block}{Un contributo originale: raffinamento dell'analisi di performance}
-	    \begin{itemize}
-	        \item Sfrutta le tecniche standard di log-replay  per riusare l'infrastruttura software esistente
-	        \item Trasforma la lista di transizioni risultante $R = [tr_1, .... , tr_n]$ in una sequenza ``eager'', cio\`{e} tale che per ogni transizione invisibile  $tr_i$ valga:
-	    \begin{itemize}
-	      \item sia $tr_p$ l'ultima transizione visibile che la precede ($p < i$)
-	      \item allora $\bullet tr_i \cap tr_p \bullet  \not = \emptyset$
-	    \end{itemize}
-	    
-	    \item Un semplice algoritmo di trasformazione: per ogni transizione invisibile $tr_i$
-	      
-	      \begin{enumerate}
-	        \item sposta verso sinistra la transizione finch\'e non si trova una transizione visibile tale che $\bullet tr_i \cap tr_p \bullet  \not =
-	          \emptyset$
-	      \end{enumerate}
-	      
-	    \item Non sono necessari cambi relativi alle metriche di conformance
-	    \end{itemize}
-	
-	  \end{block}
-	
-	}
 	
 	% ***AC \input{log4}
 	
@@ -342,6 +286,65 @@
 	  \end{block}
 	}
 	%\frame{\tableofcontents}
+	
+	
+\subsection{Tecniche di analisi}
+	\frame{
+	  \begin{block}{Tecniche di analisi di Reti di Petri adottate}
+	    
+	    \begin{itemize}
+	      \item I log delle istanze di processi sono sequenze ordinate di eventi (e.g. in base a timestamp)
+	      \item Gli eventi dei log sono mappati su transizioni della rete
+	      \item<2-> Algoritmo di \alert{log-replay}: ri-esegue un log di una istanza di processo in modo ``non bloccante''
+	        
+	        \begin{enumerate}
+	          \item Si mette un token nella piazza di partenza
+	          \item Se estrae il primo evento del log
+	          \item Si esegue la transizione corrispondente
+	            \begin{itemize}
+	              \item se la transizione non \`{e} abilitata vengono creati artificialmente i token mancanti
+	            \end{itemize}
+	        \end{enumerate}
+	      \item <3->Metriche calcolate durante il log-replay
+	        \begin{itemize}
+	          \item Numero di token mancanti o rimanenti per ogni piazza o transizione
+	          \item Numero di attraversamenti per ogni arco
+	          \item Tempo di soggiorno/attesa/sincronizzazione per ogni piazza
+	        \end{itemize}
+	    \end{itemize}
+	
+	  \end{block}
+	}
+	
+	% \input{log1}
+	% ***AC \input{log2}
+	% \input{log3}
+	
+	
+	\frame{
+	  \begin{block}{Un contributo originale: raffinamento dell'analisi di performance}
+	    \begin{itemize}
+	        \item Sfrutta le tecniche standard di log-replay  per riusare l'infrastruttura software esistente
+	        \item Trasforma la lista di transizioni risultante $R = [tr_1, .... , tr_n]$ in una sequenza ``eager'', cio\`{e} tale che per ogni transizione invisibile  $tr_i$ valga:
+	    \begin{itemize}
+	      \item sia $tr_p$ l'ultima transizione visibile che la precede ($p < i$)
+	      \item allora $\bullet tr_i \cap tr_p \bullet  \not = \emptyset$
+	    \end{itemize}
+	    
+	    \item Un semplice algoritmo di trasformazione: per ogni transizione invisibile $tr_i$
+	      
+	      \begin{enumerate}
+	        \item sposta verso sinistra la transizione finch\'e non si trova una transizione visibile tale che $\bullet tr_i \cap tr_p \bullet  \not =
+	          \emptyset$
+	      \end{enumerate}
+	      
+	    \item Non sono necessari cambi relativi alle metriche di conformance
+	    \end{itemize}
+	
+	  \end{block}
+	
+	}
+		
 	
 	\end{document}
 	
