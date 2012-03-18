@@ -136,12 +136,27 @@
 	  \end{block}
 	\end{frame}
 	
+	\section{Framework di analisi}
+	\begin{frame}
+	\frametitle{Framework di analisi}
+%	Tecnologie impiegate
+%	\begin{itemize}
+%	\item Process mining: ProM 6
+%	\item Data mining: Weka
+%	\item Linguaggio: Java
+%	\end{itemize}
+	\begin{figure}
+	\centering 
+	\includegraphics[scale=0.60]{./fig/PromPlugin_pres}
+	%\caption{\small{Flusso operativo}}
+	\end{figure}
+	\end{frame}
 	
 	% VECCHIO PEZZO DElL'ARCHITETTURA
 	% \section{The The Process Monitoring platform}
 	% \subsection{Engineering efforts}
 	
-	\input{architecture}
+	%\input{architecture}
 	
 	%\section{BPMN modeling}
 	\subsection{Traduzione BPMN -- Rete di Petri}
@@ -206,14 +221,15 @@
 	}
 	
 	
-	
+	\input{animazioneconformance}
 	% ***AC \input{log4}
 	
 	\begin{frame}{}
 	  Esempio di analisi di conformance
 	  \begin{center}
-	    \includegraphics[scale=0.50]{./fig/ConfPN}\\[10pt]
-	    \includegraphics[scale=0.50]{./fig/BPMNConf}
+	    \includegraphics[scale=0.50]{./fig/animazioneconf/ConfPNfinal}\\[10pt]
+	    \includegraphics[scale=0.20]{./fig/animazioneconf/ConfPNz}\\[10pt]
+	    \includegraphics[scale=0.50]{./fig/animazioneconf/BPMNConf}
 	  \end{center}
 	\end{frame}
 	
@@ -260,10 +276,10 @@
 	
 	%% \end{frame}
 	
-	\section{[A2.3] Middleware prototipale}
+	\section{ Middleware prototipale}
 	%\section{Concluding Remarks}
 	\frame{
-	  \begin{block}{[A2.3] Middleware prototipale: rilasci a Giugno 2011}
+	  \begin{block}{Middleware prototipale: rilasci a Giugno 2011}
 	    \begin{itemize}
 	      \item Raffinamento dell'algoritmo di log-replay per una migliore gestione delle transizioni invisibili
 	      \item Metodologia per proiettare misure di analisi sul modello BPMN
