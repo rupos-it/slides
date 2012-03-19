@@ -1,5 +1,5 @@
 	\documentclass[10pt]{beamer}
-	
+	\usepackage{tikz}
 	\usepackage{stmaryrd}
 	\usepackage{beamerthemesplit}
 	\usepackage{xcolor}
@@ -158,7 +158,14 @@
 	
 	%\input{architecture}
 	
-	%\section{BPMN modeling}
+	\section{BPMN modeling}
+	\begin{frame}{Esempio di processo BPMN}
+	  
+	  \begin{center}
+	    \includegraphics[scale=0.55]{./fig/BPMN}
+	  \end{center}
+	\end{frame}
+	
 	\subsection{Traduzione BPMN -- Rete di Petri}
 	\begin{frame}{Esempio di processo BPMN e di traduzione in Rete di Petri}
 	  
@@ -167,7 +174,99 @@
 	  \end{center}
 	\end{frame}
 	
+	
+	
+	
+	\input{animazioneconformance}
+	% ***AC \input{log4}
+	
+	\begin{frame}{}
+	  Esempio di analisi di conformance
+	  \begin{center}
+	    \includegraphics[scale=0.50]{./fig/animazioneconf/ConfPNfinal}\\[10pt]
+	    \includegraphics[scale=0.20]{./fig/animazioneconf/ConfPNz}\\[10pt]
+	    \includegraphics[scale=0.50]{./fig/animazioneconf/BPMNConf}
+	  \end{center}
+	\end{frame}
+	
+	\subsection{Proiezione dei risultati da Rete di Petri a BPMN}
+	\begin{frame}{}
+	  \begin{block}{Proiezione dei risultati di analisi su BPMN (Conformance)}
+	    \begin{itemize}
+	      \item \alert{Token mancanti}: Il log-replay produce token mancanti solo per eseguire transizioni visibili  $\Rightarrow$ pre-set di almeno una transizione visibile
+	      \item \alert{Token rimanenti} Le transizioni invisibili sono eseguite solo se richiesto da una transizione visibile $\Rightarrow$ 
+	        piazze nel  post-set di una transizione visibile  o di una transizione invisibile che produce pi\`{u} di un token
+	
+	    \end{itemize}
+	  \end{block}
+	  
+	  \begin{center}
+	    \includegraphics[scale=0.40]{./fig/MappingBPMNtoPN2}
+	  \end{center}
+	
+	\end{frame}
+
+	\input{datamining}	
+	
+	
 	\frame{
+	  Esempio di analisi di performance
+	  \begin{center}
+	    \includegraphics[scale=0.55]{./fig/PerfPN}\\[10pt]
+	    \includegraphics[scale=0.50]{./fig/BPMNPerf}
+	  \end{center}
+	}
+	
+	
+	
+	\frame{
+	  \begin{block}{Proiezione dei risultati di analisi su BPMN (Performance)}
+	    \begin{itemize}
+	      \item \alert{Tempo di attesa}: transizioni invisibili eseguite immediatamente $\Rightarrow$ pre-set di transizioni visibili
+	      \item \alert{Tempo di sincronizzazione} piazze che hanno almeno una transizione nel loro  post-set che dipende da un'altra piazza
+	    \end{itemize}
+	  \end{block}
+	  \begin{center}
+	    \includegraphics[scale=0.50]{./fig/MappingBPMNtoPN3}
+	  \end{center}
+	}
+	
+	%% \begin{frame}{[A2.3] Middleware prototipale}
+	
+	
+	
+	%% \end{frame}
+	
+	\section{ Middleware prototipale}
+	%\section{Concluding Remarks}
+	\frame{
+	  \begin{block}{Middleware prototipale}
+	    \begin{itemize}
+	      \item Raffinamento dell'algoritmo di log-replay per una migliore gestione delle transizioni invisibili
+	      \item Metodologia per proiettare misure di analisi sul modello BPMN
+	      \item Nuovo contesto ProM per eseguire plugin in ambiente senza GUI
+	    \item Plugin per trasformazione di sequence di eventi in sequenze eager
+	    \item Plugin per  valutazione di performance di una Rete di Petri
+	    \end{itemize}
+	  \end{block}
+	  \begin{block}<2->{Middleware prototipale: rilasci ad oggi}
+	    \begin{itemize}
+	        \item Plugin per trasformazione di Modelli BPMN in Reti di Petri
+	        \item Plugin per proiezione di misure di analisi sul modello BPMN originale
+	    \end{itemize}
+	  \end{block}
+	  \begin{block}<3->{Middleware prototipale: sviluppi in corso}
+	    \begin{itemize}
+	    \item Estensione della traduzione BPMN -- Rete di Petri con gestione di ciclo di vita di task con eventi intermedi
+	    \item Integrazione nella piattaforma di toolkits di Data Mining
+	    \end{itemize}
+	  \end{block}
+	}
+	%\frame{\tableofcontents}
+	
+\appendix	
+
+\frame{
 	  \begin{block}{Da messaggi SOAP a eventi/transizioni della Rete di Petri }
 	  \begin{center}
 	  \begin{tiny}
@@ -219,91 +318,6 @@
 	  \end{block}
 	
 	}
-	
-	
-	\input{animazioneconformance}
-	% ***AC \input{log4}
-	
-	\begin{frame}{}
-	  Esempio di analisi di conformance
-	  \begin{center}
-	    \includegraphics[scale=0.50]{./fig/animazioneconf/ConfPNfinal}\\[10pt]
-	    \includegraphics[scale=0.20]{./fig/animazioneconf/ConfPNz}\\[10pt]
-	    \includegraphics[scale=0.50]{./fig/animazioneconf/BPMNConf}
-	  \end{center}
-	\end{frame}
-	
-	\subsection{Proiezione dei risultati da Rete di Petri a BPMN}
-	\begin{frame}{}
-	  \begin{block}{Proiezione dei risultati di analisi su BPMN (Conformance)}
-	    \begin{itemize}
-	      \item \alert{Token mancanti}: Il log-replay produce token mancanti solo per eseguire transizioni visibili  $\Rightarrow$ pre-set di almeno una transizione visibile
-	      \item \alert{Token rimanenti} Le transizioni invisibili sono eseguite solo se richiesto da una transizione visibile $\Rightarrow$ 
-	        piazze nel  post-set di una transizione visibile  o di una transizione invisibile che produce pi\`{u} di un token
-	
-	    \end{itemize}
-	  \end{block}
-	  
-	  \begin{center}
-	    \includegraphics[scale=0.40]{./fig/MappingBPMNtoPN2}
-	  \end{center}
-	
-	\end{frame}
-	
-	\frame{
-	  Esempio di analisi di performance
-	  \begin{center}
-	    \includegraphics[scale=0.55]{./fig/PerfPN}\\[10pt]
-	    \includegraphics[scale=0.50]{./fig/BPMNPerf}
-	  \end{center}
-	}
-	
-	\frame{
-	  \begin{block}{Proiezione dei risultati di analisi su BPMN (Performance)}
-	    \begin{itemize}
-	      \item \alert{Tempo di attesa}: transizioni invisibili eseguite immediatamente $\Rightarrow$ pre-set di transizioni visibili
-	      \item \alert{Tempo di sincronizzazione} piazze che hanno almeno una transizione nel loro  post-set che dipende da un'altra piazza
-	    \end{itemize}
-	  \end{block}
-	  \begin{center}
-	    \includegraphics[scale=0.50]{./fig/MappingBPMNtoPN3}
-	  \end{center}
-	}
-	
-	%% \begin{frame}{[A2.3] Middleware prototipale}
-	
-	
-	
-	%% \end{frame}
-	
-	\section{ Middleware prototipale}
-	%\section{Concluding Remarks}
-	\frame{
-	  \begin{block}{Middleware prototipale: rilasci a Giugno 2011}
-	    \begin{itemize}
-	      \item Raffinamento dell'algoritmo di log-replay per una migliore gestione delle transizioni invisibili
-	      \item Metodologia per proiettare misure di analisi sul modello BPMN
-	      \item Nuovo contesto ProM per eseguire plugin in ambiente senza GUI
-	    \item Plugin per trasformazione di sequence di eventi in sequenze eager
-	    \item Plugin per  valutazione di performance di una Rete di Petri
-	    \end{itemize}
-	  \end{block}
-	  \begin{block}<2->{Middleware prototipale: rilasci ad oggi}
-	    \begin{itemize}
-	        \item Plugin per trasformazione di Modelli BPMN in Reti di Petri
-	        \item Plugin per proiezione di misure di analisi sul modello BPMN originale
-	    \end{itemize}
-	  \end{block}
-	  \begin{block}<3->{Middleware prototipale: sviluppi in corso}
-	    \begin{itemize}
-	    \item Estensione della traduzione BPMN -- Rete di Petri con gestione di ciclo di vita di task con eventi intermedi
-	    \item Integrazione nella piattaforma di toolkits di Data Mining
-	    \end{itemize}
-	  \end{block}
-	}
-	%\frame{\tableofcontents}
-	
-\appendix	
 %%\subsection{Tecniche di analisi}
 %	\frame{
 %	  \begin{block}{Tecniche di analisi di Reti di Petri adottate}

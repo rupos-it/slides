@@ -1,31 +1,45 @@
-\begin{frame}{Animazione Conformance}
- 
-  
-  \begin{center}
-    
-    \includegraphics[scale=0.7]{./fig/animazioneconf/log}\\[10pt]
-	    \includegraphics[scale=0.60]{./fig/animazioneconf/ConfPN}
-  \end{center}
+%\begin{frame}{Animazione Conformance}
+% 
+%  
+%  \begin{center}
+%    
+%    \includegraphics[scale=0.7]{./fig/animazioneconf/log}\\[10pt]
+%	    \includegraphics[scale=0.60]{./fig/animazioneconf/ConfPN}
+%  \end{center}
+%
+%  
+%\end{frame}
+%\begin{frame}{Animazione Conformance}
+% 
+%  
+%  \begin{center}
+%   \includegraphics[scale=0.60]{./fig/animazioneconf/log1}\\[10pt]
+%    \includegraphics[scale=0.60]{./fig/animazioneconf/ConfPN1}
+%  \end{center}
+%
+%  
+%\end{frame}
+%\begin{frame}{Animazione Conformance}
+% 
+%  
+%  \begin{center}
+%   \includegraphics[scale=0.60]{./fig/animazioneconf/log2}\\[10pt]
+%    \includegraphics[scale=0.60]{./fig/animazioneconf/ConfPN2}
+%  \end{center}
+%
+%  
+%\end{frame}
 
-  
-\end{frame}
 \begin{frame}{Animazione Conformance}
- 
-  
-  \begin{center}
-   \includegraphics[scale=0.60]{./fig/animazioneconf/log1}\\[10pt]
-    \includegraphics[scale=0.60]{./fig/animazioneconf/ConfPN1}
-  \end{center}
 
-  
-\end{frame}
-\begin{frame}{Animazione Conformance}
- 
-  
-  \begin{center}
-   \includegraphics[scale=0.60]{./fig/animazioneconf/log2}\\[10pt]
-    \includegraphics[scale=0.60]{./fig/animazioneconf/ConfPN2}
-  \end{center}
+%\multiinclude[format=eps,graphics={scale=0.6}]{./fig/animazioneconf/ConfPN}
+\foreach \i in {0,1,2,3}%
+        {%
+		\only<\i>{%
+		\includegraphics<\i>[scale=0.6]{./fig/animazioneconf/log\i}\\[10pt]
+		\includegraphics<\i>[scale=0.6]{./fig/animazioneconf/ConfPN-\i}%
+		}%end only
+        }%end foreach
 
-  
 \end{frame}
+
