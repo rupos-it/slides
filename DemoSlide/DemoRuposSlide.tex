@@ -14,7 +14,7 @@
 	
 	\usetheme{Warsaw}
 	% per trasparenza su animazioni di blocchi
-	\setbeamercovered{dynamic}
+	%\setbeamercovered{dynamic}
 	
 	
 	
@@ -29,7 +29,7 @@
 	\begin{document}
 	\frame{\titlepage}
 	
-	\section{Sommario}
+	%\section{Sommario}
 	
 	%% \begin{frame}
 	%% %\frame{
@@ -109,34 +109,55 @@
 	%\begin{block}<4->{Rassegna su Supporto per Sessioni con Correlation Set (in BPEL e BPMN)}
 	%\end{block}
 	%\end{frame}
+%	
+%	\section{Analisi e verifica dei pattern fondamentali}
+%	\subsection{Sommario}
+%	\begin{frame}{ Analisi e verifica dei pattern fondamentali}
+%	  \begin{block}{Obiettivo}
+%	\begin{itemize}
+%	  \item Integrare in RUPOS strumenti di analisi a runtime di processi
+%	  \item  Analisi basata sul confronto di logs con un modello del processo
+%	\end{itemize}
+%	\end{block}
+%	
+%	  \begin{block}<2->{Strategia}
+%	    \begin{itemize}
+%	    \item Adottare e raffinare  metodi formali disponibili (Reti di Petri)
+%	    \item Integrare ed estendere infrastrutture software esistenti (ProM)
+%	    \item Work-flow metodologico:
+%	      \begin{enumerate}
+%	      \item I processi di business sono modellati con diagrammi BPMN
+%	      \item I diagrammi BPMN vengono trasformati in Reti di Petri
+%	      \item I logs di Istanze di Processi vengono analizzati con tecniche disponibili per Reti di Petri, oppurtunamente raffinate
+%	      \item I risultati dell'analisi vengono proiettati sul modello BPMN iniziale
+%	      \end{enumerate}
+%	    \end{itemize}
+%	
+%	  \end{block}
+%	\end{frame}
+%	ProM is an extensible framework that supports a wide variety of process mining techniques in the form of plug-ins. It is platform independent as it is implemented in Java, and can be downloaded free of charge. We welcome and support practical applications of ProM, and we invite researchers and developers to contribute in the form of new plug-ins.
+%
+%ProM 6.1 is distributed in parts, which offers maximal flexibility. First, the ProM 6.1 core is distributed as a downloadable package using the GNU Public License (GPL) open source license.
+	\section{Framework di analisi}
+	\begin{frame}
+	\frametitle{Framework ProM 6}
 	
-	\section{Analisi e verifica dei pattern fondamentali}
-	\subsection{Sommario}
-	\begin{frame}{ Analisi e verifica dei pattern fondamentali}
-	  \begin{block}{Obiettivo}
-	\begin{itemize}
-	  \item Integrare in RUPOS strumenti di analisi a runtime di processi
-	  \item  Analisi basata sul confronto di logs con un modello del processo
-	\end{itemize}
-	\end{block}
-	
-	  \begin{block}<2->{Strategia}
+	\begin{figure}
+	\centering 
+	\includegraphics[scale=0.50]{./fig/prom_subtitle_hat_300}
+	%\caption{\small{Flusso operativo}}
+	\end{figure}
+	  \begin{block}{ProM}
 	    \begin{itemize}
-	    \item Adottare e raffinare  metodi formali disponibili (Reti di Petri)
-	    \item Integrare ed estendere infrastrutture software esistenti (ProM)
-	    \item Work-flow metodologico:
-	      \begin{enumerate}
-	      \item I processi di business sono modellati con diagrammi BPMN
-	      \item I diagrammi BPMN vengono trasformati in Reti di Petri
-	      \item I logs di Istanze di Processi vengono analizzati con tecniche disponibili per Reti di Petri, oppurtunamente raffinate
-	      \item I risultati dell'analisi vengono proiettati sul modello BPMN iniziale
-	      \end{enumerate}
+	    \item \`{E} un framework estensibile  che supporta una larga variet\`{a} di tecniche di process mining e analysis sotto forma di plug-in.
+	    \item Implementato in Java, \`{e} modulare e distristribuito usando la licenza GNU Public License (GPL).
+	    \item Progetto del gruppo di Process Mining, Eindhoven Technical University, Olanda.
 	    \end{itemize}
-	
-	  \end{block}
+	    \end{block}
+	    
 	\end{frame}
 	
-	\section{Framework di analisi}
+	
 	\begin{frame}
 	\frametitle{Framework di analisi}
 %	Tecnologie impiegate
@@ -157,24 +178,32 @@
 	% \subsection{Engineering efforts}
 	
 	%\input{architecture}
-	
-	\subsection{BPMN modeling}
+
+	\section{BPMN modeling-Vista Alto Livello}
 	\begin{frame}{Esempio di processo BPMN}
-	  
-	  \begin{center}
-	    \includegraphics[scale=0.55]{./fig/BPMN}
+	    \begin{center}
+	    \includegraphics[scale=0.50]{./fig/BPMN_AltoL}
 	  \end{center}
+%	  \begin{center}
+%	    \includegraphics[scale=0.50]{./fig/BPMN}
+%	  \end{center}
 	\end{frame}
 	
 	\subsection{Traduzione BPMN - Rete di Petri}
 	\begin{frame}{Esempio di processo BPMN e di traduzione in Rete di Petri}
 	  
 	  \begin{center}
-	    \includegraphics[scale=0.55]{./fig/BPMNandPN}
+	    \includegraphics[scale=0.60]{./fig/BPMNandPN}
 	  \end{center}
 	\end{frame}
 	
-	
+	\section{BPMN modeling-Vista Basso Livello}
+	\begin{frame}{Esempio di processo BPMN}
+	   
+	  \begin{center}
+	    \includegraphics[scale=0.60]{./fig/BPMN}
+	  \end{center}
+	\end{frame}
 	
 	\subsection{Animazione Conformace}
 	\input{animazioneconformance}
@@ -191,22 +220,7 @@
 	  \end{center}
 	\end{frame}
 	
-	\subsection{Proiezione dei risultati da Rete di Petri a BPMN}
-	\begin{frame}{}
-	  \begin{block}{Proiezione dei risultati di analisi su BPMN (Conformance)}
-	    \begin{itemize}
-	      \item \alert{Token mancanti}: Il log-replay produce token mancanti solo per eseguire transizioni visibili  $\Rightarrow$ pre-set di almeno una transizione visibile
-	      \item \alert{Token rimanenti} Le transizioni invisibili sono eseguite solo se richiesto da una transizione visibile $\Rightarrow$ 
-	        piazze nel  post-set di una transizione visibile  o di una transizione invisibile che produce pi\`{u} di un token
 	
-	    \end{itemize}
-	  \end{block}
-	  
-	  \begin{center}
-	    \includegraphics[scale=0.40]{./fig/MappingBPMNtoPN2}
-	  \end{center}
-	
-	\end{frame}
 
 	\subsection{Classificazione}
 	\input{datamining}	
@@ -222,6 +236,60 @@
 	
 	
 	
+	
+	
+	%% \begin{frame}{[A2.3] Middleware prototipale}
+	
+	
+	
+	%% \end{frame}
+	
+%	\section{ Middleware prototipale}
+%	%\section{Concluding Remarks}
+%	\frame{
+%	  \begin{block}{Middleware prototipale}
+%	    \begin{itemize}
+%	      \item Raffinamento dell'algoritmo di log-replay 
+%	      %per una migliore gestione delle transizioni invisibili
+%	      \item Metodologia per proiettare misure di analisi sul modello BPMN
+%	      \item Nuovo contesto ProM per eseguire plugin in ambiente senza GUI
+%	    \item Plugin per trasformazione di sequence di eventi in sequenze eager
+%	    \item Plugin per  valutazione di performance e conformance di una Rete di Petri
+%	    \end{itemize}
+%	  \end{block}
+%	  \begin{block}<2->{Rilasci ad oggi}
+%	    \begin{itemize}
+%	        \item Plugin per trasformazione di Modelli BPMN in Reti di Petri
+%	        \item Plugin per proiezione di misure di analisi sul modello BPMN originale
+%	        \item Integrazione nella piattaforma di toolkits di Data Mining
+%	    \end{itemize}
+%	  \end{block}
+%	  \begin{block}<3->{sviluppi in corso}
+%	    \begin{itemize}
+%	    \item Estensione della traduzione BPMN -- Rete di Petri con gestione di ciclo di vita di task con eventi intermedi
+%	    
+%	    \end{itemize}
+%	  \end{block}
+%	}
+	%\frame{\tableofcontents}
+	
+\appendix	
+\subsection{Proiezione dei risultati da Rete di Petri a BPMN}
+	\begin{frame}{}
+	  \begin{block}{Proiezione dei risultati di analisi su BPMN (Conformance)}
+	    \begin{itemize}
+	      \item \alert{Token mancanti}: Il log-replay produce token mancanti solo per eseguire transizioni visibili  $\Rightarrow$ pre-set di almeno una transizione visibile
+	      \item \alert{Token rimanenti} Le transizioni invisibili sono eseguite solo se richiesto da una transizione visibile $\Rightarrow$ 
+	        piazze nel  post-set di una transizione visibile  o di una transizione invisibile che produce pi\`{u} di un token
+	
+	    \end{itemize}
+	  \end{block}
+	  
+	  \begin{center}
+	    \includegraphics[scale=0.40]{./fig/MappingBPMNtoPN2}
+	  \end{center}
+	
+	\end{frame}
 	\frame{
 	  \begin{block}{Proiezione dei risultati di analisi su BPMN (Performance)}
 	    \begin{itemize}
@@ -233,44 +301,6 @@
 	    \includegraphics[scale=0.50]{./fig/MappingBPMNtoPN3}
 	  \end{center}
 	}
-	
-	%% \begin{frame}{[A2.3] Middleware prototipale}
-	
-	
-	
-	%% \end{frame}
-	
-	\section{ Middleware prototipale}
-	%\section{Concluding Remarks}
-	\frame{
-	  \begin{block}{Middleware prototipale}
-	    \begin{itemize}
-	      \item Raffinamento dell'algoritmo di log-replay 
-	      %per una migliore gestione delle transizioni invisibili
-	      \item Metodologia per proiettare misure di analisi sul modello BPMN
-	      \item Nuovo contesto ProM per eseguire plugin in ambiente senza GUI
-	    \item Plugin per trasformazione di sequence di eventi in sequenze eager
-	    \item Plugin per  valutazione di performance e conformance di una Rete di Petri
-	    \end{itemize}
-	  \end{block}
-	  \begin{block}<2->{Rilasci ad oggi}
-	    \begin{itemize}
-	        \item Plugin per trasformazione di Modelli BPMN in Reti di Petri
-	        \item Plugin per proiezione di misure di analisi sul modello BPMN originale
-	        \item Integrazione nella piattaforma di toolkits di Data Mining
-	    \end{itemize}
-	  \end{block}
-	  \begin{block}<3->{sviluppi in corso}
-	    \begin{itemize}
-	    \item Estensione della traduzione BPMN -- Rete di Petri con gestione di ciclo di vita di task con eventi intermedi
-	    
-	    \end{itemize}
-	  \end{block}
-	}
-	%\frame{\tableofcontents}
-	
-\appendix	
-
 \frame{
 	  \begin{block}{Da messaggi SOAP a eventi/transizioni della Rete di Petri }
 	  \begin{center}

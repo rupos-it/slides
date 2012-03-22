@@ -1,8 +1,9 @@
 #!/bin/bash
 
+#ConfPN_
 echo "inizio"
 directory1=./
-for file in "$directory"ConfPN-*.eps
+for file in "$directory"ConfPN_*.eps
 do 
   echo "$file"
   MOVFile=`basename $file`

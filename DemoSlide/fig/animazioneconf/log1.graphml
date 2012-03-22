@@ -17,10 +17,10 @@
     <node id="n0">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="46.0" width="141.0" x="438.1558544463828" y="429.89379862449175"/>
+          <y:Geometry height="46.0" width="141.0" x="297.3434466487938" y="429.89285361930297"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">AvviaProcedimento
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">AvviaIstruttoria
 #1 start
 19.03.2012 23:37:39</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
@@ -31,12 +31,12 @@
     <node id="n1">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="46.0" width="141.0" x="579.1558544463828" y="429.89379862449175"/>
+          <y:Geometry height="46.0" width="141.0" x="438.3434466487938" y="429.89285361930297"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">AvviaProcedimento
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">AvviaIstruttoria
 #2 complete
-19.03.2012 23:37:40</y:NodeLabel>
+20.03.2012 23:37:45</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -45,13 +45,13 @@
     <node id="n2">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="46.0" width="141.0" x="861.0505675831118" y="429.89379862449175"/>
+          <y:Geometry height="46.0" width="141.0" x="1002.009414913542" y="429.89379862449175"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">Parare
-#4 start
-21.03.2012 23:37:48</y:NodeLabel>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">ParerePositivo
+#6 Complete
+20.03.2012 23:37:58</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.50000000000011" y="21.0"/>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -59,12 +59,12 @@
     <node id="n3">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="46.0" width="141.0" x="1002.0505675831118" y="429.89379862449175"/>
+          <y:Geometry height="46.0" width="141.0" x="860.9682622439718" y="429.89379862449175"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">Parere
-#5 complete
-06.04.2012 23:37:58</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">ParerePositivo
+#5 start
+20.03.2012 23:37:49</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -76,9 +76,9 @@
           <y:Geometry height="46.0" width="141.0" x="1143.0505675831118" y="429.89379862449175"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">ParerePositivo
-#6 start
-06.04.2012 23:38:00</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="136.45703125" x="2.271484375" y="-0.19921875">RilascioAutorizzazione
+#7 start
+03.04.2012 23:37:58</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -90,9 +90,9 @@
           <y:Geometry height="46.0" width="141.0" x="1284.0505675831118" y="429.89379862449175"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">ParerePositivo
-#7 complete
-06.04.2012 23:38:01</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="136.45703125" x="2.271484375" y="-0.19921875">RilascioAutorizzazione
+#8 complete
+13.04.2012 23:38:04</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -104,9 +104,9 @@
           <y:Geometry height="46.0" width="141.0" x="1425.0505675831118" y="429.89379862449175"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">Rilascia
-#8 start
-06.04.2012 23:38:06</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">NotificaRichiedente
+#9 start
+13.04.2012 23:38:06</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -118,9 +118,9 @@
           <y:Geometry height="46.0" width="141.0" x="1566.0505675831118" y="429.89379862449175"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">Rilascia
-#9 complete
-06.04.2012 23:38:08</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">NotificaRichiedente
+#10 complete
+13.04.2012 23:38:06</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -129,12 +129,26 @@
     <node id="n8">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="46.0" width="141.0" x="719.9682622439718" y="429.89474362968053"/>
+          <y:Geometry height="46.0" width="141.0" x="579.1558544463828" y="429.89379862449175"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">Parare
-#3 start
-21.03.2012 23:37:45</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="129.21484375" x="5.892578125" y="-0.19921875">AvvioIstruttoria
+#3 complete
+20.03.2012 23:37:48</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n9">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="46.0" width="141.0" x="719.9682622439718" y="429.89379862449175"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="139.10546875" x="0.947265625" y="-0.19921875">RinnovoAutorizzazione
+#4 complete
+20.03.2012 23:37:48</y:NodeLabel>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="68.5" y="21.0"/>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>

@@ -17,7 +17,7 @@
     <node id="n0">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="58.999999999999986" width="128.1875" x="182.6249999999999" y="408.76393484744017"/>
+          <y:Geometry height="58.999999999999986" width="128.1875" x="147.705568720379" y="420.76393484744017"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#FF0000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="0.0" fontFamily="Dialog" fontSize="18" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="81.7919921875" x="23.19775390625" y="6.30078125">Weka
@@ -29,21 +29,21 @@ Instance</y:NodeLabel>
     <node id="n1">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="245.3" width="378.5" x="365.5" y="315.6139348474402"/>
+          <y:Geometry height="245.3" width="438.15402843601896" x="330.5805687203791" y="327.6139348474402"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="230.125" modelName="custom" textColor="#000000" visible="true" width="366.03125" x="6.234375" y="7.587499999999977">@relation Paper
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="230.125" modelName="custom" textColor="#000000" visible="true" width="430.296875" x="3.928576718009481" y="7.587499999999977">@relation Paper
 
-@attribute tipo_0 {AntennaUMTS,Farmacia,Bar}
-@attribute citt_0 {Eu,ExtraEu}
+@attribute ragione_sociale_0 {Link,RuposSRL,NuovaTV}
+@attribute tipo_impianto_0 {2,4}
 @attribute conformance {TRUE,FALSE,'?'}
 
 @data
-Farmacia,Eu,TRUE
-Farmacia,Eu,TRUE
-AntennaUMTS,Eu,TRUE
-AntennaUMTS,Eu,TRUE
-Bar,ExtraEu,TRUE<y:LabelModel>
+RuposSRL,3,TRUE
+RuposSRL,4,TRUE
+Link,6,TRUE
+NuovaTV,2,TRUE
+NuovaTv,4,FALSE<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -60,7 +60,7 @@ Bar,ExtraEu,TRUE<y:LabelModel>
           <y:Geometry height="67.0" width="161.0" x="853.6882400000001" y="244.8399348474402"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="15" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.666015625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="38.74609375" x="61.126953125" y="22.6669921875">Tipo</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="15" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.666015625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="124.6005859375" x="18.19970703125" y="22.6669921875">Ragione Sociale</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -104,7 +104,7 @@ Bar,ExtraEu,TRUE<y:LabelModel>
           <y:Geometry height="59.0" width="166.0" x="996.2500000000001" y="448.5066015141067"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="15" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.666015625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="40.54052734375" x="62.729736328124886" y="18.6669921875">Città</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="15" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.666015625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="107.9892578125" x="29.005371093749886" y="18.6669921875">tipo impianto</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -123,10 +123,10 @@ Bar,ExtraEu,TRUE<y:LabelModel>
     <node id="n8">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="22.625" width="121.6484375" x="1144.2977812500003" y="507.1875"/>
+          <y:Geometry height="22.625" width="121.6484375" x="1114.5000000000002" y="507.1875"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="0.0" fontFamily="Dialog" fontSize="18" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="25.19921875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="88.4541015625" x="16.59716796875" y="-1.287109375">=ExtraEu</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="0.0" fontFamily="Dialog" fontSize="18" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="25.19921875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="30.19140625" x="45.728515625" y="-1.287109375">=2</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -137,7 +137,7 @@ Bar,ExtraEu,TRUE<y:LabelModel>
           <y:Geometry height="42.3843977272727" width="101.73221598800512" x="1045.8068303437994" y="362.4565947020473"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="0.0" fontFamily="Dialog" fontSize="18" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="25.19921875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="153.6865234375" x="-25.977153724747495" y="8.59258948863635">=Antenna UMTS</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="0.0" fontFamily="Dialog" fontSize="18" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="25.19921875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="107.658203125" x="-2.9629935684974953" y="8.59258948863635">=Nuova TV</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -145,7 +145,7 @@ Bar,ExtraEu,TRUE<y:LabelModel>
     <node id="n10">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="58.999999999999986" width="128.1875" x="58.24999999999977" y="301.71536969488034"/>
+          <y:Geometry height="58.999999999999986" width="128.1875" x="23.330568720378892" y="313.71536969488034"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#FF0000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="0.0" fontFamily="Dialog" fontSize="18" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="25.19921875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="37.837890625" x="45.1748046875" y="16.900390625">Log</y:NodeLabel>
@@ -156,7 +156,7 @@ Bar,ExtraEu,TRUE<y:LabelModel>
     <node id="n11">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="58.999999999999986" width="128.1875" x="58.24999999999977" y="526.5066015141067"/>
+          <y:Geometry height="58.999999999999986" width="128.1875" x="23.330568720378892" y="538.5066015141067"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#FF0000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="0.0" fontFamily="Dialog" fontSize="18" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="127.2666015625" x="0.46044921875" y="6.30078125">Conformance
@@ -173,7 +173,7 @@ Analysis</y:NodeLabel>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="six_pos" modelPosition="shead" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="29.587890625" x="-57.334234165885505" y="5.473454565647103">=UE</y:EdgeLabel>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="six_pos" modelPosition="shead" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="21.4609375" x="-49.207281040885505" y="5.473454565647103">=4</y:EdgeLabel>
           <y:Arc height="0.6219733953475952" ratio="0.01849236711859703" type="fixedRatio"/>
         </y:ArcEdge>
       </data>
@@ -186,7 +186,7 @@ Analysis</y:NodeLabel>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="six_pos" modelPosition="head" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="68.98046875" x="-140.28977818788962" y="82.7537478192279">=Farmacia</y:EdgeLabel>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="six_pos" modelPosition="head" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="39.900390625" x="-111.20970006288962" y="82.7537478192279">=Link</y:EdgeLabel>
           <y:Arc height="-0.9642195701599121" ratio="-0.01744353212416172" type="fixedRatio"/>
         </y:ArcEdge>
       </data>
@@ -199,7 +199,7 @@ Analysis</y:NodeLabel>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="33.61328125" x="-0.0019127616601508635" y="93.88754758322523">=Bar</y:EdgeLabel>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="72.203125" x="-0.0019127616601508635" y="93.88754758322523">=Rupos srl</y:EdgeLabel>
           <y:Arc height="0.4419425427913666" ratio="0.008850900456309319" type="fixedRatio"/>
         </y:ArcEdge>
       </data>
@@ -234,7 +234,7 @@ Analysis</y:NodeLabel>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="25.343749999999943" y="27.999988314237044">
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="25.343752314129063" y="27.999988314237044">
             <y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
@@ -250,11 +250,11 @@ Analysis</y:NodeLabel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="246.7187499999999" y="556.0066015141067"/>
+            <y:Point x="211.799318720379" y="568.0066015141067"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="31.64062499999983" y="28.000009717231706">
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="31.64062731412895" y="28.000009717231706">
             <y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
@@ -270,11 +270,11 @@ Analysis</y:NodeLabel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="246.7187499999999" y="331.21536969488034"/>
+            <y:Point x="211.799318720379" y="343.21536969488034"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="31.64062499999983" y="28.000007146052212">
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="31.64062731412895" y="28.000007146052212">
             <y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
