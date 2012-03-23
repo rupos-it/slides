@@ -434,7 +434,7 @@ Start</y:NodeLabel>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="1151.2381496434357" y="483.44781792744084"/>
-          <y:Fill hasColor="false" transparent="false"/>
+          <y:Fill color="#FF6600" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="0.0" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.62109375" modelName="sides" modelPosition="s" textColor="#000000" visible="true" width="67.5146484375" x="-18.75732421875" y="30.0">Rinnova
 Complete</y:NodeLabel>
@@ -1286,7 +1286,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e45" source="n0" target="n43">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1307,7 +1306,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e46" source="n0" target="n44">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1328,7 +1326,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e47" source="n49" target="n26">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1349,7 +1346,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e48" source="n25" target="n23">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1370,7 +1366,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e49" source="n21" target="n23">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1391,7 +1386,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e50" source="n51" target="n26">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1412,7 +1406,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e51" source="n4" target="n6">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1433,7 +1426,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e52" source="n44" target="n52">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1452,7 +1444,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e53" source="n52" target="n51">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1499,7 +1490,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e56" source="n40" target="n55">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1518,7 +1508,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e57" source="n54" target="n58">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1537,7 +1526,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e58" source="n58" target="n42">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1556,7 +1544,6 @@ Complete</y:NodeLabel>
       </data>
     </edge>
     <edge id="e59" source="n57" target="n54">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
